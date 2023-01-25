@@ -1,4 +1,20 @@
+support:
+  email: mycare@skytelservices.com
+
+geo:
+  ip:
+    lib:
+      enabled: false
+
+purge:
+  cron:
+    expression: 0 0 5 * * ?
+
 spring:
+
+  main:
+    allow-bean-definition-overriding: true
+
   datasource:
     url: jdbc:h2:mem:pigeondb
     username: sa
@@ -12,3 +28,16 @@ spring:
         format_sql: true
     database: h2
     database-platform: org.hibernate.dialect.H2Dialect
+
+  mail:
+    host: smtp.mailhostbox.com
+    port: 587
+    username: mycare@skytelservices.com
+    password: H(nGECReA6
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
